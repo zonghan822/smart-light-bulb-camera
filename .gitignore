@@ -1,0 +1,21 @@
+# Private coursework files (report and slides contain student details)
+_private/
+
+# Runtime output: latest camera frame written by facial_recognition.py
+/img.jpg
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# Node-RED
+.flows*.json.backup
+*_cred.json
+
+# OS / editor
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/

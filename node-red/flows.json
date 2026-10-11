@@ -1,0 +1,1382 @@
+[
+    {
+        "id": "73748e8f9c075c9d",
+        "type": "tab",
+        "label": "Mini Project Main Flow",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "e8fb4d4b831863bf",
+        "type": "ui_group",
+        "name": "Light",
+        "tab": "616a7a2a8f1a914a",
+        "order": 2,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "bd409febff4b13fa",
+        "type": "ui_group",
+        "name": "Camera",
+        "tab": "616a7a2a8f1a914a",
+        "order": 4,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "118b0559462cd1a9",
+        "type": "ui_group",
+        "name": "Voice Assistant",
+        "tab": "616a7a2a8f1a914a",
+        "order": 1,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "616a7a2a8f1a914a",
+        "type": "ui_tab",
+        "name": "Smart Light Bulb Camera",
+        "icon": "dashboard",
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "30cba91d89bcb70c",
+        "type": "ui_base",
+        "theme": {
+            "name": "theme-light",
+            "lightTheme": {
+                "default": "#0094CE",
+                "baseColor": "#0094CE",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": false
+            },
+            "darkTheme": {
+                "default": "#097479",
+                "baseColor": "#097479",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": false
+            },
+            "customTheme": {
+                "name": "Untitled Theme 1",
+                "default": "#4B7930",
+                "baseColor": "#4B7930",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+            },
+            "themeState": {
+                "base-color": {
+                    "default": "#0094CE",
+                    "value": "#0094CE",
+                    "edited": false
+                },
+                "page-titlebar-backgroundColor": {
+                    "value": "#0094CE",
+                    "edited": false
+                },
+                "page-backgroundColor": {
+                    "value": "#fafafa",
+                    "edited": false
+                },
+                "page-sidebar-backgroundColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "group-textColor": {
+                    "value": "#1bbfff",
+                    "edited": false
+                },
+                "group-borderColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "group-backgroundColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "widget-textColor": {
+                    "value": "#111111",
+                    "edited": false
+                },
+                "widget-backgroundColor": {
+                    "value": "#0094ce",
+                    "edited": false
+                },
+                "widget-borderColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "base-font": {
+                    "value": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+                }
+            },
+            "angularTheme": {
+                "primary": "indigo",
+                "accents": "blue",
+                "warn": "red",
+                "background": "grey",
+                "palette": "light"
+            }
+        },
+        "site": {
+            "name": "Node-RED Dashboard",
+            "hideToolbar": "false",
+            "allowSwipe": "false",
+            "lockMenu": "false",
+            "allowTempTheme": "true",
+            "dateFormat": "DD/MM/YYYY",
+            "sizes": {
+                "sx": 48,
+                "sy": 48,
+                "gx": 6,
+                "gy": 6,
+                "cx": 6,
+                "cy": 6,
+                "px": 0,
+                "py": 0
+            }
+        }
+    },
+    {
+        "id": "15eaa9966b2d9693",
+        "type": "ui_group",
+        "name": "Default",
+        "tab": "3f95991180733a25",
+        "order": 1,
+        "disp": true,
+        "width": "6",
+        "collapse": false
+    },
+    {
+        "id": "a1d723200456c93b",
+        "type": "MySQLdatabase",
+        "name": "",
+        "host": "127.0.0.1",
+        "port": "3307",
+        "db": "mini_project_ep0403",
+        "tz": "",
+        "charset": "UTF8"
+    },
+    {
+        "id": "3f95991180733a25",
+        "type": "ui_tab",
+        "name": "Smart Home",
+        "icon": "dashboard",
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "ee3605c6dc4712fe",
+        "type": "debug",
+        "z": "73748e8f9c075c9d",
+        "name": "Show Detected Person on debug window",
+        "active": true,
+        "tosidebar": true,
+        "console": true,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1630,
+        "y": 20,
+        "wires": []
+    },
+    {
+        "id": "48e163b7789cea0f",
+        "type": "inject",
+        "z": "73748e8f9c075c9d",
+        "name": "Start",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 90,
+        "y": 520,
+        "wires": [
+            [
+                "c79dfd428fcf9a16",
+                "9e73fa53e49eecbd",
+                "9ebcbb01d8d53b8a",
+                "62ae2da011db6dac"
+            ]
+        ]
+    },
+    {
+        "id": "4ac1aded28cb73bb",
+        "type": "exec",
+        "z": "73748e8f9c075c9d",
+        "command": "python -u \"/path/to/smart-light-bulb-camera/src/facial_recognition.py\"",
+        "addpay": "",
+        "append": "",
+        "useSpawn": "true",
+        "timer": "",
+        "winHide": false,
+        "oldrc": false,
+        "name": "Run Detector",
+        "x": 1350,
+        "y": 140,
+        "wires": [
+            [
+                "ee3605c6dc4712fe",
+                "9f73feaf9ce49c86",
+                "ed54bd42dc397001",
+                "005d10a6d5bc4091"
+            ],
+            [],
+            []
+        ]
+    },
+    {
+        "id": "9e73fa53e49eecbd",
+        "type": "ui_switch",
+        "z": "73748e8f9c075c9d",
+        "name": "Light Switch",
+        "label": "Light Switch",
+        "tooltip": "",
+        "group": "e8fb4d4b831863bf",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "decouple": "false",
+        "topic": "topic",
+        "topicType": "msg",
+        "style": "",
+        "onvalue": "true",
+        "onvalueType": "bool",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "false",
+        "offvalueType": "bool",
+        "officon": "",
+        "offcolor": "",
+        "animate": false,
+        "className": "",
+        "x": 870,
+        "y": 600,
+        "wires": [
+            [
+                "f8f74a8c261766f1"
+            ]
+        ]
+    },
+    {
+        "id": "f8f74a8c261766f1",
+        "type": "ui_led",
+        "z": "73748e8f9c075c9d",
+        "order": 2,
+        "group": "e8fb4d4b831863bf",
+        "width": "6",
+        "height": "3",
+        "label": "",
+        "labelPlacement": "left",
+        "labelAlignment": "left",
+        "colorForValue": [
+            {
+                "color": "#008000",
+                "value": "true",
+                "valueType": "bool"
+            }
+        ],
+        "allowColorForValueInMessage": false,
+        "shape": "circle",
+        "showGlow": true,
+        "name": "Light",
+        "x": 1050,
+        "y": 600,
+        "wires": []
+    },
+    {
+        "id": "9f73feaf9ce49c86",
+        "type": "ui_text",
+        "z": "73748e8f9c075c9d",
+        "group": "bd409febff4b13fa",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "name": "Show Detected Person on Dashboard",
+        "label": "Detected Person",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#000000",
+        "x": 1610,
+        "y": 280,
+        "wires": []
+    },
+    {
+        "id": "d86c30df.cda1d",
+        "type": "ui_template",
+        "z": "73748e8f9c075c9d",
+        "group": "bd409febff4b13fa",
+        "name": "Show Camera Image on Dashboard",
+        "order": 7,
+        "width": "6",
+        "height": "5",
+        "format": "<img src=\"data:image/jpg;base64,{{msg.payload}}\" id='img' alt='Turn On Camera to Get Image'>",
+        "storeOutMessages": true,
+        "fwdInMessages": true,
+        "resendOnRefresh": false,
+        "templateScope": "local",
+        "className": "",
+        "x": 2080,
+        "y": 540,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "cbde47d22f567d1c",
+        "type": "image",
+        "z": "73748e8f9c075c9d",
+        "name": "Image Preview",
+        "width": 200,
+        "data": "payload",
+        "dataType": "msg",
+        "thumbnail": false,
+        "active": true,
+        "pass": false,
+        "outputs": 0,
+        "x": 1800,
+        "y": 340,
+        "wires": []
+    },
+    {
+        "id": "d2931c088ba9d2da",
+        "type": "trigger",
+        "z": "73748e8f9c075c9d",
+        "name": "",
+        "op1": "",
+        "op2": "",
+        "op1type": "pay",
+        "op2type": "date",
+        "duration": "-1",
+        "extend": false,
+        "overrideDelay": false,
+        "units": "s",
+        "reset": "",
+        "bytopic": "all",
+        "topic": "topic",
+        "outputs": 1,
+        "x": 1360,
+        "y": 460,
+        "wires": [
+            [
+                "29f039c891a49276"
+            ]
+        ]
+    },
+    {
+        "id": "29f039c891a49276",
+        "type": "file in",
+        "z": "73748e8f9c075c9d",
+        "name": "Read Camera Image",
+        "filename": "filename",
+        "filenameType": "msg",
+        "format": "",
+        "chunk": false,
+        "sendError": false,
+        "encoding": "none",
+        "allProps": false,
+        "x": 1560,
+        "y": 460,
+        "wires": [
+            [
+                "cbde47d22f567d1c",
+                "b2f2bdf05d3c24fd"
+            ]
+        ]
+    },
+    {
+        "id": "b2f2bdf05d3c24fd",
+        "type": "base64",
+        "z": "73748e8f9c075c9d",
+        "name": "Converting to Base64",
+        "action": "",
+        "property": "payload",
+        "x": 1800,
+        "y": 540,
+        "wires": [
+            [
+                "d86c30df.cda1d"
+            ]
+        ]
+    },
+    {
+        "id": "c79dfd428fcf9a16",
+        "type": "ui_switch",
+        "z": "73748e8f9c075c9d",
+        "name": "Camera Switch",
+        "label": "Camera Switch",
+        "tooltip": "",
+        "group": "bd409febff4b13fa",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "decouple": "false",
+        "topic": "topic",
+        "topicType": "msg",
+        "style": "",
+        "onvalue": "true",
+        "onvalueType": "bool",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "false",
+        "offvalueType": "bool",
+        "officon": "",
+        "offcolor": "",
+        "animate": false,
+        "className": "",
+        "x": 780,
+        "y": 300,
+        "wires": [
+            [
+                "e4a8ce303e82d78a"
+            ]
+        ]
+    },
+    {
+        "id": "06cd3aed1c327fa4",
+        "type": "change",
+        "z": "73748e8f9c075c9d",
+        "name": "if off",
+        "rules": [
+            {
+                "t": "set",
+                "p": "kill",
+                "pt": "msg",
+                "to": "",
+                "tot": "str"
+            },
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "Camera is off",
+                "tot": "str"
+            },
+            {
+                "t": "set",
+                "p": "filename",
+                "pt": "msg",
+                "to": "/path/to/smart-light-bulb-camera/assets/camera_off.jpg",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1130,
+        "y": 360,
+        "wires": [
+            [
+                "4ac1aded28cb73bb",
+                "9f73feaf9ce49c86",
+                "d2931c088ba9d2da"
+            ]
+        ]
+    },
+    {
+        "id": "e4a8ce303e82d78a",
+        "type": "switch",
+        "z": "73748e8f9c075c9d",
+        "name": "if on/off",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "true",
+                "vt": "jsonata"
+            },
+            {
+                "t": "eq",
+                "v": "false",
+                "vt": "jsonata"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 960,
+        "y": 300,
+        "wires": [
+            [
+                "5ba49e6abf63da4e"
+            ],
+            [
+                "06cd3aed1c327fa4"
+            ]
+        ]
+    },
+    {
+        "id": "62ae2da011db6dac",
+        "type": "ui_switch",
+        "z": "73748e8f9c075c9d",
+        "name": "",
+        "label": "Light Sensor switch",
+        "tooltip": "",
+        "group": "e8fb4d4b831863bf",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "decouple": "false",
+        "topic": "topic",
+        "topicType": "msg",
+        "style": "",
+        "onvalue": "true",
+        "onvalueType": "bool",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "false",
+        "offvalueType": "bool",
+        "officon": "",
+        "offcolor": "",
+        "animate": false,
+        "className": "",
+        "x": 790,
+        "y": 820,
+        "wires": [
+            [
+                "5af5b19d2db0cf5f"
+            ]
+        ]
+    },
+    {
+        "id": "5ba49e6abf63da4e",
+        "type": "change",
+        "z": "73748e8f9c075c9d",
+        "name": "if on",
+        "rules": [
+            {
+                "t": "set",
+                "p": "filename",
+                "pt": "msg",
+                "to": "/path/to/smart-light-bulb-camera/img.jpg",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1130,
+        "y": 240,
+        "wires": [
+            [
+                "d2931c088ba9d2da",
+                "4ac1aded28cb73bb"
+            ]
+        ]
+    },
+    {
+        "id": "9ebcbb01d8d53b8a",
+        "type": "exec",
+        "z": "73748e8f9c075c9d",
+        "command": "python -u \"/path/to/smart-light-bulb-camera/src/voice_control.py\"",
+        "addpay": "",
+        "append": "",
+        "useSpawn": "true",
+        "timer": "",
+        "winHide": false,
+        "oldrc": false,
+        "name": "Voice Control",
+        "x": 230,
+        "y": 520,
+        "wires": [
+            [
+                "a078fd750fd41e29",
+                "8d25d4ff30e004aa",
+                "16f817b14f4f6aa9"
+            ],
+            [],
+            []
+        ]
+    },
+    {
+        "id": "a078fd750fd41e29",
+        "type": "switch",
+        "z": "73748e8f9c075c9d",
+        "name": "Command",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "Camera On.",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "Camera Off.",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "Light On.",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "Light Off.",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "Light Sensor On.",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "Light Sensor Off.",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 6,
+        "x": 410,
+        "y": 520,
+        "wires": [
+            [
+                "316ef9a957da4415"
+            ],
+            [
+                "27d4dceb339ed781"
+            ],
+            [
+                "d0504f6fe8542213"
+            ],
+            [
+                "0857094e96e2ed85"
+            ],
+            [
+                "a7074d9fc20f9996"
+            ],
+            [
+                "b598fd2a7ac3df3f"
+            ]
+        ]
+    },
+    {
+        "id": "316ef9a957da4415",
+        "type": "change",
+        "z": "73748e8f9c075c9d",
+        "name": "On Camera",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "true",
+                "tot": "bool"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 590,
+        "y": 260,
+        "wires": [
+            [
+                "c79dfd428fcf9a16"
+            ]
+        ]
+    },
+    {
+        "id": "27d4dceb339ed781",
+        "type": "change",
+        "z": "73748e8f9c075c9d",
+        "name": "Off Camera",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "false",
+                "tot": "bool"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 590,
+        "y": 340,
+        "wires": [
+            [
+                "c79dfd428fcf9a16"
+            ]
+        ]
+    },
+    {
+        "id": "8d25d4ff30e004aa",
+        "type": "debug",
+        "z": "73748e8f9c075c9d",
+        "name": "Show Assistant Reply on debug window",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 220,
+        "y": 400,
+        "wires": []
+    },
+    {
+        "id": "16f817b14f4f6aa9",
+        "type": "ui_text",
+        "z": "73748e8f9c075c9d",
+        "group": "118b0559462cd1a9",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "name": "Show Assistant Reply on Dashboard",
+        "label": "Jarvis",
+        "format": "{{msg.payload}}",
+        "layout": "col-center",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#000000",
+        "x": 210,
+        "y": 640,
+        "wires": []
+    },
+    {
+        "id": "d0504f6fe8542213",
+        "type": "change",
+        "z": "73748e8f9c075c9d",
+        "name": "On Light",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "true",
+                "tot": "bool"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 680,
+        "y": 560,
+        "wires": [
+            [
+                "9e73fa53e49eecbd"
+            ]
+        ]
+    },
+    {
+        "id": "0857094e96e2ed85",
+        "type": "change",
+        "z": "73748e8f9c075c9d",
+        "name": "Off Light",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "false",
+                "tot": "bool"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 680,
+        "y": 640,
+        "wires": [
+            [
+                "9e73fa53e49eecbd"
+            ]
+        ]
+    },
+    {
+        "id": "a4662f6ca2000371",
+        "type": "counter",
+        "z": "73748e8f9c075c9d",
+        "name": "Unknown Counter",
+        "init": "0",
+        "step": "1",
+        "lower": null,
+        "upper": null,
+        "mode": "increment",
+        "outputs": "1",
+        "x": 2090,
+        "y": 100,
+        "wires": [
+            [
+                "305f3a3df088ab17"
+            ]
+        ]
+    },
+    {
+        "id": "ed54bd42dc397001",
+        "type": "switch",
+        "z": "73748e8f9c075c9d",
+        "name": "Check Person Unknown Person",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "Zong Han",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "unknown",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 1610,
+        "y": 100,
+        "wires": [
+            [
+                "482a3513cc8206bc"
+            ],
+            [
+                "ea413086cccf2dd8"
+            ]
+        ]
+    },
+    {
+        "id": "482a3513cc8206bc",
+        "type": "change",
+        "z": "73748e8f9c075c9d",
+        "name": "Reset Counter",
+        "rules": [
+            {
+                "t": "set",
+                "p": "reset",
+                "pt": "msg",
+                "to": "true",
+                "tot": "bool"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1860,
+        "y": 80,
+        "wires": [
+            [
+                "a4662f6ca2000371"
+            ]
+        ]
+    },
+    {
+        "id": "305f3a3df088ab17",
+        "type": "switch",
+        "z": "73748e8f9c075c9d",
+        "name": "If Unknown Counter > 10",
+        "property": "count",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "gt",
+                "v": "10",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 2310,
+        "y": 100,
+        "wires": [
+            [
+                "871b3b9fbb5a87a0"
+            ]
+        ]
+    },
+    {
+        "id": "d3802deb5abec1c1",
+        "type": "function",
+        "z": "73748e8f9c075c9d",
+        "name": "Prepare email alert",
+        "func": "var file = msg.filename;    // create local file variable for convenient reference\nvar d = new Date();     // create current date object for the time string\nvar tstring = d.toString().substring(0, 4) + d.toString().substring(15, 21);\n\nmsg.attachments =\n{\n    filename: file.substring(file.lastIndexOf('/') + 1, file.length),\n    content: msg.payload\n};    // content should be a file binary buffer\n\nmsg.topic = \"Intruder Alert on \" + tstring;// email subject\nmsg.payload = \"Intruder Detected.\\nSee Attached File for Intruder Image\\n\\nLink to node red dashboard: http://127.0.0.1:1880/ui\"; // email body\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 2750,
+        "y": 100,
+        "wires": [
+            [
+                "482a3513cc8206bc",
+                "5670b385537cec4d"
+            ]
+        ]
+    },
+    {
+        "id": "ea413086cccf2dd8",
+        "type": "change",
+        "z": "73748e8f9c075c9d",
+        "name": "Increment Counter",
+        "rules": [
+            {
+                "t": "set",
+                "p": "increment",
+                "pt": "msg",
+                "to": "1",
+                "tot": "num"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1870,
+        "y": 120,
+        "wires": [
+            [
+                "a4662f6ca2000371"
+            ]
+        ]
+    },
+    {
+        "id": "871b3b9fbb5a87a0",
+        "type": "file in",
+        "z": "73748e8f9c075c9d",
+        "name": "Read Camera Image",
+        "filename": "filename",
+        "filenameType": "msg",
+        "format": "",
+        "chunk": false,
+        "sendError": false,
+        "encoding": "none",
+        "allProps": false,
+        "x": 2540,
+        "y": 100,
+        "wires": [
+            [
+                "d3802deb5abec1c1"
+            ]
+        ]
+    },
+    {
+        "id": "5670b385537cec4d",
+        "type": "delay",
+        "z": "73748e8f9c075c9d",
+        "name": "Avoid spam",
+        "pauseType": "rate",
+        "timeout": "5",
+        "timeoutUnits": "seconds",
+        "rate": "1",
+        "nbRateUnits": "10",
+        "rateUnits": "minute",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": true,
+        "allowrate": false,
+        "outputs": 2,
+        "x": 2950,
+        "y": 100,
+        "wires": [
+            [
+                "0e1d3b9bc4da39f7"
+            ],
+            []
+        ]
+    },
+    {
+        "id": "0e1d3b9bc4da39f7",
+        "type": "e-mail",
+        "z": "73748e8f9c075c9d",
+        "server": "smtp.gmail.com",
+        "port": "465",
+        "authtype": "BASIC",
+        "saslformat": true,
+        "token": "oauth2Response.access_token",
+        "secure": true,
+        "tls": true,
+        "name": "Intruder alert email",
+        "dname": "send email",
+        "x": 3110,
+        "y": 100,
+        "wires": []
+    },
+    {
+        "id": "cb5171492592bcc1",
+        "type": "random",
+        "z": "73748e8f9c075c9d",
+        "name": "LDR Analog Output Simulate",
+        "low": "0",
+        "high": "1023",
+        "inte": "true",
+        "property": "payload",
+        "x": 1300,
+        "y": 800,
+        "wires": [
+            [
+                "b072da8352de588b",
+                "0ed01ee210ff09e9",
+                "ba662db5a507ab10"
+            ]
+        ]
+    },
+    {
+        "id": "b33071b5a8661a5b",
+        "type": "switch",
+        "z": "73748e8f9c075c9d",
+        "name": "if on/off",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "true",
+                "vt": "jsonata"
+            },
+            {
+                "t": "eq",
+                "v": "false",
+                "vt": "jsonata"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 1080,
+        "y": 820,
+        "wires": [
+            [
+                "cb5171492592bcc1"
+            ],
+            [
+                "f66eeec4035dcfb2"
+            ]
+        ]
+    },
+    {
+        "id": "b072da8352de588b",
+        "type": "ui_gauge",
+        "z": "73748e8f9c075c9d",
+        "name": "LDR Value",
+        "group": "e8fb4d4b831863bf",
+        "order": 4,
+        "width": 0,
+        "height": 0,
+        "gtype": "gage",
+        "title": "LDR",
+        "label": "units",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "1023",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "diff": false,
+        "className": "",
+        "x": 1530,
+        "y": 900,
+        "wires": []
+    },
+    {
+        "id": "0ed01ee210ff09e9",
+        "type": "switch",
+        "z": "73748e8f9c075c9d",
+        "name": "if ldr < 600",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "lte",
+                "v": "600",
+                "vt": "num"
+            },
+            {
+                "t": "gt",
+                "v": "600",
+                "vt": "num"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 1530,
+        "y": 780,
+        "wires": [
+            [
+                "d0504f6fe8542213"
+            ],
+            [
+                "0857094e96e2ed85"
+            ]
+        ]
+    },
+    {
+        "id": "a7074d9fc20f9996",
+        "type": "change",
+        "z": "73748e8f9c075c9d",
+        "name": "On LDR",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "true",
+                "tot": "bool"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 580,
+        "y": 780,
+        "wires": [
+            [
+                "62ae2da011db6dac"
+            ]
+        ]
+    },
+    {
+        "id": "b598fd2a7ac3df3f",
+        "type": "change",
+        "z": "73748e8f9c075c9d",
+        "name": "Off LDR",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "false",
+                "tot": "bool"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 580,
+        "y": 860,
+        "wires": [
+            [
+                "62ae2da011db6dac"
+            ]
+        ]
+    },
+    {
+        "id": "f66eeec4035dcfb2",
+        "type": "change",
+        "z": "73748e8f9c075c9d",
+        "name": "LDR off",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "0",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1260,
+        "y": 860,
+        "wires": [
+            [
+                "b072da8352de588b"
+            ]
+        ]
+    },
+    {
+        "id": "5af5b19d2db0cf5f",
+        "type": "trigger",
+        "z": "73748e8f9c075c9d",
+        "name": "loop",
+        "op1": "",
+        "op2": "",
+        "op1type": "pay",
+        "op2type": "payl",
+        "duration": "-5",
+        "extend": false,
+        "overrideDelay": false,
+        "units": "s",
+        "reset": "",
+        "bytopic": "all",
+        "topic": "topic",
+        "outputs": 1,
+        "x": 950,
+        "y": 820,
+        "wires": [
+            [
+                "b33071b5a8661a5b"
+            ]
+        ]
+    },
+    {
+        "id": "9b7aa341be049510",
+        "type": "mysql",
+        "z": "73748e8f9c075c9d",
+        "mydb": "a1d723200456c93b",
+        "name": "MySQL Database Configuration",
+        "x": 2170,
+        "y": 200,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "005d10a6d5bc4091",
+        "type": "function",
+        "z": "73748e8f9c075c9d",
+        "name": "Get Detected Person and Send to MySQL",
+        "func": "msg.topic = \"INSERT INTO facial_recognition (person_detect, image) VALUES (\" + '\"' + msg.payload + '\"' + \", LOAD_FILE(\" + '\"' + msg.filename + '\"' + \"))\";\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1660,
+        "y": 200,
+        "wires": [
+            [
+                "31f70b6ec3109997"
+            ]
+        ]
+    },
+    {
+        "id": "31f70b6ec3109997",
+        "type": "delay",
+        "z": "73748e8f9c075c9d",
+        "name": "Avoid spam 10sec",
+        "pauseType": "rate",
+        "timeout": "5",
+        "timeoutUnits": "seconds",
+        "rate": "1",
+        "nbRateUnits": "10",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": true,
+        "allowrate": false,
+        "outputs": 2,
+        "x": 1930,
+        "y": 200,
+        "wires": [
+            [
+                "9b7aa341be049510"
+            ],
+            []
+        ]
+    },
+    {
+        "id": "a7c1be629c40b350",
+        "type": "mysql",
+        "z": "73748e8f9c075c9d",
+        "mydb": "a1d723200456c93b",
+        "name": "MySQL Database Configuration",
+        "x": 2150,
+        "y": 840,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "ba662db5a507ab10",
+        "type": "function",
+        "z": "73748e8f9c075c9d",
+        "name": "Get LDR Value and Send to MySQL",
+        "func": "msg.topic = \"INSERT INTO ldr (value) VALUES (\" + '\"' + msg.payload + '\"' + \")\";\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1620,
+        "y": 840,
+        "wires": [
+            [
+                "616c7ecbcb02006d"
+            ]
+        ]
+    },
+    {
+        "id": "616c7ecbcb02006d",
+        "type": "delay",
+        "z": "73748e8f9c075c9d",
+        "name": "Avoid spam 20sec",
+        "pauseType": "rate",
+        "timeout": "5",
+        "timeoutUnits": "seconds",
+        "rate": "1",
+        "nbRateUnits": "20",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": true,
+        "allowrate": false,
+        "outputs": 2,
+        "x": 1890,
+        "y": 840,
+        "wires": [
+            [
+                "a7c1be629c40b350"
+            ],
+            []
+        ]
+    }
+]
